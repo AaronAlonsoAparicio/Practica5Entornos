@@ -8,12 +8,12 @@ public class Daw1 {
 		ArrayList<IntegrantesClase> clase = new ArrayList<>();
 			
 		clase.add(new Profesor(null, null, 0, 0, null));
-		clase.add(new Alumno(null, null, 0, 0));
-		clase.add(new Alumno(null, null, 0, 0));
+		clase.add(new Alumno(null, null, 0, null,0));
+		clase.add(new Alumno(null, null, 0, null,0));
 		
 		clase.add(new Profesor(null, null, 0, 0, null));
-		clase.add(new Alumno(null, null, 0, 0));
-		clase.add(new Alumno(null, null, 0, 0));
+		clase.add(new Alumno(null, null, 0, null,0));
+		clase.add(new Alumno(null, null, 0, null,0));
 		
 		
 		

@@ -1,10 +1,12 @@
 package clase;
 
 /**
- * Clase que representa a un alumno en una clase.
+ * @author Aaron Clase que representa a un alumno en una clase.
  */
 public class Alumno extends IntegrantesClase {
 	private final int numeroAsignaturas = 4; // Número fijo de asignaturas para un alumno
+	private String nombrePadre;
+	private int anyoNacimiento;
 
 	/**
 	 * Constructor de la clase Alumno.
@@ -13,9 +15,32 @@ public class Alumno extends IntegrantesClase {
 	 * @param nombre            El nombre del alumno.
 	 * @param edad              La edad del alumno.
 	 * @param numeroAsignaturas El número de asignaturas del alumno.
+	 * @param nombrePadre       El nombre del padre del alumno
+	 * @param anyoNacimiento    El año en el que nacio el alumno
 	 */
-	public Alumno(String dni, String nombre, int edad, int numeroAsignaturas) {
+
+	public Alumno(String dni, String nombre, int edad, String nombrePadre, int anyoNacimiento) {
 		super(dni, nombre, edad);
+		this.nombrePadre = nombrePadre;
+		this.anyoNacimiento = anyoNacimiento;
+	}
+
+	/**
+	 * Retorna el nombre del padre.
+	 *
+	 * @return El nombre del padre.
+	 */
+	public String getNombrePadre() {
+		return nombrePadre;
+	}
+
+	/**
+	 * Retorna el año de nacimiento.
+	 *
+	 * @return El año de nacimiento.
+	 */
+	public int getAnyoNacimiento() {
+		return anyoNacimiento;
 	}
 
 	/**
@@ -95,6 +120,21 @@ public class Alumno extends IntegrantesClase {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Determina si la persona es menor de edad basándose en su año de nacimiento.
+	 *
+	 * @return true si la persona es menor de edad, false si es mayor de edad.
+	 */
+	public boolean esMenorEdad() {
+		if (this.anyoNacimiento < 2006) {
+			System.out.println("Es mayor de edad");
+			return false;
+		} else {
+			System.out.println("Es menor de edad");
+			return true;
+		}
 	}
 
 }
