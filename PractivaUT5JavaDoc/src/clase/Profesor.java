@@ -5,12 +5,16 @@ import java.util.ArrayList;
 public class Profesor extends IntegrantesClase {
 	private double sueldo;
 	private ArrayList<Alumno> alumnos;
+	private int numeroHijos;
+	private boolean jefeDepartamento;
 
-	public Profesor(String dni, String nombre, int edad, double sueldo, ArrayList<Alumno> alumnos) {
+	
+
+	public Profesor(String dni, String nombre, int edad, double sueldo, int numeroHijos, boolean jefeDepartamento) {
 		super(dni, nombre, edad);
 		this.sueldo = sueldo;
-		this.alumnos = new ArrayList<>();
-
+		this.numeroHijos = numeroHijos;
+		this.jefeDepartamento = jefeDepartamento;
 	}
 
 	@Override
@@ -71,7 +75,7 @@ public class Profesor extends IntegrantesClase {
 	}
 
 	public boolean anyadirAlumnos() {
-		Alumno nuevoAlumno = new Alumno("51246081B", "Aaron", 24, 4);
+		Alumno nuevoAlumno = new Alumno("513764U1V", "Aaron", 24,"Miguel", 2000 );
 		for (Alumno alumno : alumnos) {
 			if (alumnos.contains(nuevoAlumno)) {
 				System.out.println("Este alumnos ya esta en clase.");
