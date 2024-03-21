@@ -50,8 +50,7 @@ public class Alumno extends IntegrantesClase {
 	 */
 	@Override
 	public String toString() {
-		return "Alumno [dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + ", notaMediaCurso="
-				+ ", numeroAsignaturas=" + numeroAsignaturas + "]";
+		return  this.nombre + "[ "+ dni + ", " + nombre + ", " + edad + ", numero de asignaturas: " + numeroAsignaturas + "]";
 	}
 
 	/**
