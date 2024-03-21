@@ -4,11 +4,8 @@ import java.util.ArrayList;
 
 public class Profesor extends IntegrantesClase {
 	private double sueldo;
-	private ArrayList<Alumno> alumnos;
 	private int numeroHijos;
 	private boolean jefeDepartamento;
-
-	
 
 	public Profesor(String dni, String nombre, int edad, double sueldo, int numeroHijos, boolean jefeDepartamento) {
 		super(dni, nombre, edad);
@@ -17,10 +14,33 @@ public class Profesor extends IntegrantesClase {
 		this.jefeDepartamento = jefeDepartamento;
 	}
 
+	public double getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(double sueldo) {
+		this.sueldo = sueldo;
+	}
+
+	public int getNumeroHijos() {
+		return numeroHijos;
+	}
+
+	public void setNumeroHijos(int numeroHijos) {
+		this.numeroHijos = numeroHijos;
+	}
+
+	public boolean isJefeDepartamento() {
+		return jefeDepartamento;
+	}
+
+	public void setJefeDepartamento(boolean jefeDepartamento) {
+		this.jefeDepartamento = jefeDepartamento;
+	}
+
 	@Override
 	public String toString() {
-		return "Profesor [dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + ", sueldo=" + sueldo + ", alumnos="
-				+ alumnos + "]";
+		return "Profesor [dni=" + dni + ", nombre=" + nombre + ", edad=" + edad + ", sueldo=" + sueldo + "]";
 	}
 
 	@Override
@@ -63,22 +83,17 @@ public class Profesor extends IntegrantesClase {
 		return true;
 	}
 
+	public boolean esJedeDepartamento() {
+		if (this.sueldo < 2000) {
+			setJefeDepartamento(false);
+			return false;
 
-	public boolean anyadirAlumno() {
-		Alumno nuevoAlumno = new Alumno("513764U1V", "Aaron", 24,"Miguel", 2000 );
-		for (Alumno alumno : alumnos) {
-			if (alumnos.contains(nuevoAlumno)) {
-				System.out.println("Este alumno ya esta en clase.");
-				return false;
+		} else {
 
-			} else {
-				System.out.println("Nuevo alumno en clase.");
-				alumnos.add(nuevoAlumno);
-
-			}
+			setJefeDepartamento(true);
+			return true;
 
 		}
-		return true;
 
 	}
 
