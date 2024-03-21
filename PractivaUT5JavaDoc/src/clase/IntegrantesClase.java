@@ -16,6 +16,14 @@ public abstract class IntegrantesClase {
 		comprobarDni();
 
 	}
+	
+	
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
 
 	public int getEdad() {
 		return edad;

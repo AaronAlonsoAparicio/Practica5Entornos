@@ -63,22 +63,12 @@ public class Profesor extends IntegrantesClase {
 		return true;
 	}
 
-	public double calcularNotaMediaAlumnos() {
-		double mediaAlumnos = 0;
-		double resultadoMedia = 0;
-		for (Alumno alumno : alumnos) {
-			mediaAlumnos += alumno.calcularNotaMedia();
-			resultadoMedia = mediaAlumnos / alumnos.size();
-		}
-		return resultadoMedia;
 
-	}
-
-	public boolean anyadirAlumnos() {
+	public boolean anyadirAlumno() {
 		Alumno nuevoAlumno = new Alumno("513764U1V", "Aaron", 24,"Miguel", 2000 );
 		for (Alumno alumno : alumnos) {
 			if (alumnos.contains(nuevoAlumno)) {
-				System.out.println("Este alumnos ya esta en clase.");
+				System.out.println("Este alumno ya esta en clase.");
 				return false;
 
 			} else {

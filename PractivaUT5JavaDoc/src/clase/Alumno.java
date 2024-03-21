@@ -50,7 +50,7 @@ public class Alumno extends IntegrantesClase {
 	 */
 	@Override
 	public String toString() {
-		return  this.nombre + "[ "+ dni + ", " + nombre + ", " + edad + ", numero de asignaturas: " + numeroAsignaturas + "]";
+		return  this.nombre + " ["+ dni + ", " + nombre + ", " + edad + ", numero de asignaturas: " + numeroAsignaturas + "]";
 	}
 
 	/**
@@ -128,10 +128,10 @@ public class Alumno extends IntegrantesClase {
 	 */
 	public boolean esMenorEdad() {
 		if (this.anyoNacimiento < 2006) {
-			System.out.println("Es mayor de edad");
+			System.out.println(getNombre() + " es mayor de edad");
 			return false;
 		} else {
-			System.out.println("Es menor de edad");
+			System.out.println( getNombre()+ " es menor de edad");
 			return true;
 		}
 	}
