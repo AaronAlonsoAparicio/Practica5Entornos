@@ -50,7 +50,8 @@ public class Alumno extends IntegrantesClase {
 	 */
 	@Override
 	public String toString() {
-		return  this.nombre + " ["+ dni + ", " + nombre + ", " + edad + ", numero de asignaturas: " + numeroAsignaturas + "]";
+		return this.nombre + " [" + dni + ", " + nombre + ", " + edad + ", numero de asignaturas: " + numeroAsignaturas
+				+ "]";
 	}
 
 	/**
@@ -74,6 +75,8 @@ public class Alumno extends IntegrantesClase {
 	 * 
 	 * @param suma
 	 * @return double la nota media de cada alumno.
+	 * @see mediaAsisgaturas#calcularNotaMedia()
+	 * 
 	 */
 
 	public double calcularNotaMedia() {
@@ -122,16 +125,36 @@ public class Alumno extends IntegrantesClase {
 	}
 
 	/**
+	 * Determina si una persona es mayor de edad o no.
+	 * 
+	 * @return true si la persona es mayor de eedad, false si no lo es, true.
+	 * @deprecated Este metodo ya no se una. Utilizar el metodo @link #esMenorEdad()
+	 */
+
+	public boolean esMayorEdad() {
+		if (this.anyoNacimiento > 2006) {
+			return true;
+
+		} else {
+			return false;
+
+		}
+
+	}
+
+	/**
 	 * Determina si la persona es menor de edad basándose en su año de nacimiento.
 	 *
 	 * @return true si la persona es menor de edad, false si es mayor de edad.
+	 * @since 2.0
+	 * 
 	 */
 	public boolean esMenorEdad() {
 		if (this.anyoNacimiento < 2006) {
 			System.out.println(getNombre() + " es mayor de edad");
 			return false;
 		} else {
-			System.out.println( getNombre()+ " es menor de edad");
+			System.out.println(getNombre() + " es menor de edad");
 			return true;
 		}
 	}
