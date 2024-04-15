@@ -11,7 +11,7 @@ public class Alumno extends IntegrantesClase {
 	/**
 	 * Constructor de la clase Alumno.
 	 * 
-	 * @param dni1               El DNI del alumno.
+	 * @param dni12               El DNI del alumno.
 	 * @param nombre            El nombre del alumno.
 	 * @param edad              La edad del alumno.
 	 * @param numeroAsignaturas El número de asignaturas del alumno.
